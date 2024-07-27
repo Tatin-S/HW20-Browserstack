@@ -51,7 +51,7 @@ tasks.withType(Test) {
         }
     }
 }
-/*
+
 tasks.register('ios', Test) {
     useJUnitPlatform {
         includeTags("ios")
@@ -62,4 +62,4 @@ tasks.register('android', Test) {
     useJUnitPlatform {
         includeTags("android")
     }
-}*/
+}

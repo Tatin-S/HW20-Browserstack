@@ -10,6 +10,8 @@ import org.aeonbits.owner.Config;
 public interface BrowserstackConfig extends Config {
     @DefaultValue("bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c")
     String browserstackApp();
+    @DefaultValue("android")
+    String browserstackplatformName();
     @DefaultValue("Google Pixel 3")
     String browserstackDevice();
     @DefaultValue("9.0")

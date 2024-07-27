@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SimpleIosTest extends TestBase{
     @Test
-    @Tag("ios")
+    //@Tag("ios")
     @DisplayName("Text enter test")
     void inputTextTest()  {
         step("Tap on Text button", () -> {

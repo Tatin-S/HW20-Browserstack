@@ -21,7 +21,7 @@ public class SimpleIosTest extends TestBase{
             $(accessibilityId("Text Input")).sendKeys("BrowserStack"+"\n");
         });
         step("Check text output", () -> {
-            $(accessibilityId("Text Output")).shouldHave(text("hello@browserstack.com"));
+            $(accessibilityId("Text Output")).shouldHave(text("BrowserStack"));
         });
     }
 }

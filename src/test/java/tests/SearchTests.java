@@ -29,9 +29,6 @@ public class SearchTests extends TestBase {
     @Tag("android")
     @DisplayName("Open found article")
     void successfulOpenArticleTest() {
-        step("Click Skip button", () -> {
-            $(id("fragment_onboarding_skip_button")).click();
-        });
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("search_src_text")).sendKeys("BrowserStack");

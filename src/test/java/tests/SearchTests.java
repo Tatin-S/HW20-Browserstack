@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -13,6 +14,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @Test
+    @Tag("android")
     @DisplayName("Find article by specific name test")
     void successfulSearchTest() {
         step("Type search", () -> {
@@ -24,6 +26,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
+    @Tag("android")
     @DisplayName("Open found article")
     void successfulOpenArticleTest() {
         step("Click Skip button", () -> {

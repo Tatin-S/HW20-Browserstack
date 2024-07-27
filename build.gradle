@@ -42,6 +42,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -51,14 +52,13 @@ tasks.withType(Test) {
         }
     }
 }
-
-tasks.register('ios', Test) {
+tasks.register('iosTests', Test) {
     useJUnitPlatform {
         includeTags("ios")
     }
 }
 
-tasks.register('android', Test) {
+tasks.register('androidTests', Test) {
     useJUnitPlatform {
         includeTags("android")
     }

@@ -8,11 +8,11 @@ import org.aeonbits.owner.Config;
         "classpath:android.properties"
 })
 public interface BrowserstackConfig extends Config {
-    @DefaultValue("bs://7149dde8bfb8309f035fa3279374dd8cd85f6c1d")
+    @DefaultValue("bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c")
     String browserstackApp();
-    @DefaultValue("Samsung Galaxy S23 Ultra")
+    @DefaultValue("Google Pixel 3")
     String browserstackDevice();
-    @DefaultValue("13.0")
+    @DefaultValue("9.0")
     String browserstackPlatform();
     @DefaultValue("First Java Project")
     String browserstackProject();

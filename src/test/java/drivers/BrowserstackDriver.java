@@ -22,7 +22,7 @@ public class BrowserstackDriver implements WebDriverProvider {
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
-        DesiredCapabilities caps = new DesiredCapabilities();
+/*        DesiredCapabilities caps = new DesiredCapabilities();
         HashMap<String,Object> browserstackOptions = new HashMap<String, Object>();
         browserstackOptions.put("projectName",config.browserstackProject());
         browserstackOptions.put("appStoreConfiguration", new HashMap<String,String>()
@@ -42,6 +42,29 @@ public class BrowserstackDriver implements WebDriverProvider {
         try {
             return new RemoteWebDriver(
                     new URL(config.browserstackUrl()), caps);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }*/
+        DesiredCapabilities caps = new DesiredCapabilities();
+        HashMap<String,Object> browserstackOptions = new HashMap<String, Object>();
+        browserstackOptions.put("projectName","test");
+        browserstackOptions.put("appStoreConfiguration", new HashMap<String,String>()
+        {{put("username", "alexanderveber_scKk7u");put("password", "wS5KzeFZM74kNzW6yazZ");}});
+
+        caps.setCapability("bstack:options", browserstackOptions);
+        caps.setCapability("platformName", "android");
+        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+
+        caps.setCapability("deviceName", "Google Pixel 3");
+        caps.setCapability("platformVersion", "9.0");
+
+        caps.setCapability("projectName", "test");
+        caps.setCapability("buildName", "test");
+        caps.setCapability("name", "test");
+
+        try {
+            return new RemoteWebDriver(
+                    new URL("https://hub.browserstack.com/wd/hub"), caps);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

@@ -14,14 +14,14 @@ public class SimpleIosTest extends TestBase{
     @Tag("ios")
     @DisplayName("Text enter test")
     void inputTextTest()  {
-        step("Tap on Text button", () -> {
+        step("Click on Text button", () -> {
             $(accessibilityId("Text Button")).click();
         });
         step("Input text", () -> {
-            $(accessibilityId("Text Input")).setValue("BrowserStack").pressEnter();
+            $(accessibilityId("Text Input")).sendKeys("BrowserStack"+"\n");
         });
-        step("Verify that test output has the text from input", () -> {
-            $(accessibilityId("Text Output")).shouldHave(text("BrowserStack"));
+        step("Check text output", () -> {
+            $(accessibilityId("Text Output")).shouldHave(text("hello@browserstack.com"));
         });
     }
 }

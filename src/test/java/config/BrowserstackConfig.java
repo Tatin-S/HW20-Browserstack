@@ -13,26 +13,26 @@ public interface BrowserstackConfig extends Config {
     String browserstackApp();
 
     @Key("browserstackDevice")
-    @DefaultValue("Google Pixel 3")
+   // @DefaultValue("Google Pixel 3")
     String browserstackDevice();
 
     @Key("browserstackPlatform")
-    @DefaultValue("9.0")
+    //@DefaultValue("9.0")
     String browserstackPlatform();
 
     @Key("browserstackProject")
-    @DefaultValue("First Java Project")
+  //  @DefaultValue("First Java Project")
     String browserstackProject();
 
     @Key("browserstackBuild")
-    @DefaultValue("browserstack-build-1")
+  //  @DefaultValue("browserstack-build-1")
     String browserstackBuild();
 
     @Key("browserstackName")
-    @DefaultValue("first_test")
+ //   @DefaultValue("first_test")
     String browserstackName();
 
     @Key("browserstackUrl")
-    @DefaultValue("https://hub.browserstack.com/wd/hub")
+  //  @DefaultValue("https://hub.browserstack.com/wd/hub")
     String browserstackUrl();
 }

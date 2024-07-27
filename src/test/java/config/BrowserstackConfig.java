@@ -5,6 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
         "classpath:${env}.properties",
+        "file:~/${env}.properties"
 })
 public interface BrowserstackConfig extends Config {
     @Key("browserstackApp")

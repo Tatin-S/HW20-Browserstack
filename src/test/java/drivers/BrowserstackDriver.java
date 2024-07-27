@@ -28,11 +28,11 @@ public class BrowserstackDriver implements WebDriverProvider {
 
         caps.setCapability("app", config.browserstackApp());
 
-        caps.setCapability("device", config.browserstackDevice());
-        caps.setCapability("os_version", config.browserstackPlatform());
+        caps.setCapability("deviceName", config.browserstackDevice());
+        caps.setCapability("platformVersion", config.browserstackPlatform());
 
-        caps.setCapability("project", config.browserstackProject());
-        caps.setCapability("build", config.browserstackBuild());
+        caps.setCapability("projectName", config.browserstackProject());
+        caps.setCapability("buildName", config.browserstackBuild());
         caps.setCapability("name", config.browserstackName());
 
         try {

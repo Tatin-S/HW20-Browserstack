@@ -5,13 +5,14 @@ import config.AuthConfig;
 import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 
 public class BrowserstackDriver implements WebDriverProvider {
 
@@ -21,11 +22,13 @@ public class BrowserstackDriver implements WebDriverProvider {
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
-        MutableCapabilities caps = new MutableCapabilities();
+        DesiredCapabilities caps = new DesiredCapabilities();
+        HashMap<String,Object> browserstackOptions = new HashMap<String, Object>();
+        browserstackOptions.put("projectName",config.browserstackProject());
+        browserstackOptions.put("appStoreConfiguration", new HashMap<String,String>()
+        {{put("userName", authConfig.username());put("password", authConfig.password());}});
 
-        caps.setCapability("userName", authConfig.username());
-        caps.setCapability("accessKey", authConfig.password());
-
+        caps.setCapability("bstack:options", browserstackOptions);
         caps.setCapability("app", config.browserstackApp());
 
         caps.setCapability("deviceName", config.browserstackDevice());

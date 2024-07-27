@@ -35,7 +35,7 @@ public class SearchTests extends TestBase {
         });
         step("Open found article", () -> $(id("page_list_item_title")).click());
         step("Verify article", () -> {
-            $(className("view_wiki_error_text")).shouldHave(text("Error"));
+            $(className("android.widget.TextView")).shouldHave(text("An error occurred"));
         });
     }
 }

@@ -15,7 +15,7 @@ import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
 
-    public AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
+    public AuthConfig authConfig = ConfigFactory.create(AuthConfig.class, System.getProperties());
     public BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class);
 
     @Nonnull
@@ -34,6 +34,8 @@ public class BrowserstackDriver implements WebDriverProvider {
         caps.setCapability("project", config.browserstackProject());
         caps.setCapability("build", config.browserstackBuild());
         caps.setCapability("name", config.browserstackName());
+        caps.setCapability("language", config.browserstackLanguage());
+        caps.setCapability("locale", config.browserstackLocale());
 
         try {
             return new RemoteWebDriver(

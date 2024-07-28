@@ -1,10 +1,18 @@
-# HW-20.Browserstack
-
-Для запуска тестов на android используйте следующую команду:
+# Запуск тестов
+***
+Для запуска тестов локально на реальном девайсе запустить команду:
 ```shell
-gradle clean android -Ddevice=android
+gradle test -DdeviceHost=real
 ```
-Для iOS устройств:
+***
+Для запуска тестов локально на эмуляторе запустить команду:
 ```shell
-gradle clean ios -Ddevice=ios
+gradle test -DdeviceHost=emulation
 ```
+***
+Для запуска тестов в Browserstack запустить команду:
+```shell
+gradle test -DdeviceHost=browserstack
+```
+***
+При запуске по кнопке в IDEA (или когда deviceHost не указан), тесты по умолчанию запускаются в Browserstack.

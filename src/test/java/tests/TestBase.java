@@ -27,6 +27,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         String deviceHost = System.getProperty("deviceHost");
         if ((deviceHost == null) || deviceHost.equals("browserstack")) {

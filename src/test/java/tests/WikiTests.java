@@ -55,15 +55,14 @@ public class WikiTests extends TestBase {
     }*/
 
     @Test
-    @DisplayName("Отображение ошибки при некорректном вводе значения в поиск")
-    void errorOpenArticleTest() {
+    @DisplayName("Отображение пустого списка при некорректном вводе значения в поиск")
+    void emptySearchTest() {
         firstPage
                 .clickSkipButtonOnFirstPage();
         searchPage
                 .checkAccessibilityOfSearchBar()
-                .enterValueIntoSearch(testData.valueSearchError)
-                .clickFirstArticleInResultList();
+                .enterValueIntoSearch(testData.valueEmptySearch);
         articlePage
-                .findText(testData.errorMessage);
+                .findText(testData.noResults);
     }
 }

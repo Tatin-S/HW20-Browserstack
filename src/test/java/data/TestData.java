@@ -1,7 +1,7 @@
 package data;
 
 public class TestData {
-    public String errorMessage = "An error occurred";
+    public String noResults = "No results";
     public String valueSearch = "BrowserStack";
-    public String valueSearchError = "errortest";
+    public String valueEmptySearch = "EmptySearch";
 }

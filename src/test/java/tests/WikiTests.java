@@ -39,7 +39,7 @@ public class WikiTests extends TestBase {
                 .clickToGetStarted();
     }*/
 
-    @Test
+/*    @Test
     @DisplayName("Поиск статьи по заданному значению")
     void successfulOpenArticleTest() {
         firstPage
@@ -52,23 +52,9 @@ public class WikiTests extends TestBase {
         articlePage
                 .findText(testData.valueSearch);
 
-    }
-
-/*    @Test
-    @DisplayName("Проверка краткого описания статьи")
-    void checkDescriptionTest() {
-        back();
-        step("Отправляем запрос в википедии", () -> {
-            $(accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
-        });
-
-        step("Проверяем, что найденный заголовок имеет корректное описание", () ->
-                $(id("org.wikipedia.alpha:id/page_list_item_description"))
-                        .shouldHave(text("Automation for Apps")));
     }*/
 
-/*    @Test
+    @Test
     @DisplayName("Отображение ошибки при некорректном вводе значения в поиск")
     void errorOpenArticleTest() {
         firstPage
@@ -78,5 +64,5 @@ public class WikiTests extends TestBase {
                 .enterValueIntoSearch(testData.valueSearchError);
         articlePage
                 .findText(testData.errorMessage);
-    }*/
+    }
 }

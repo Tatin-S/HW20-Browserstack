@@ -14,7 +14,8 @@ public class SearchPage {
     private static final SelenideElement
             searchBar = $(id("org.wikipedia.alpha:id/search_container")),
             searchText = $(id("org.wikipedia.alpha:id/search_src_text"));
-    private final ElementsCollection listTitles = $$(id("org.wikipedia.alpha:id/page_list_item_title")),
+    private final ElementsCollection
+            listTitles = $$(id("org.wikipedia.alpha:id/page_list_item_title")),
             resultList = $$(id("org.wikipedia.alpha:id/page_list_item_description"));
 
 

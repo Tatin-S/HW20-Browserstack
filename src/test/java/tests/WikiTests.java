@@ -46,13 +46,27 @@ public class WikiTests extends TestBase {
                 .clickSkipButtonOnFirstPage();
         searchPage
                 .checkAccessibilityOfSearchBar()
-                .enterValueIntoSearch("BrowserStack")
+                .enterValueIntoSearch(testData.valueSearch)
                 .checkListTitles()
                 .clickFirstArticleInResultList();
         articlePage
-                .findText("BrowserStack");
+                .findText(testData.valueSearch);
 
     }
+
+/*    @Test
+    @DisplayName("Проверка краткого описания статьи")
+    void checkDescriptionTest() {
+        back();
+        step("Отправляем запрос в википедии", () -> {
+            $(accessibilityId("Search Wikipedia")).click();
+            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+        });
+
+        step("Проверяем, что найденный заголовок имеет корректное описание", () ->
+                $(id("org.wikipedia.alpha:id/page_list_item_description"))
+                        .shouldHave(text("Automation for Apps")));
+    }*/
 
 /*    @Test
     @DisplayName("Отображение ошибки при некорректном вводе значения в поиск")

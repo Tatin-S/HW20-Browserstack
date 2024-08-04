@@ -27,7 +27,7 @@ public class SearchPage {
 
     @Step("Вводим значение в строку поиска")
     public SearchPage enterValueIntoSearch(String value) {
-            searchText.sendKeys(value);
+            searchBar.sendKeys(value);
         return this;
     }
 

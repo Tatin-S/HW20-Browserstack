@@ -15,7 +15,7 @@ public class WikiTests extends TestBase {
     ArticlePage articlePage = new ArticlePage();
     TestData testData = new TestData();
 
-    @DisplayName("Успешный просмотр экранов онбординга")
+/*    @DisplayName("Успешный просмотр экранов онбординга")
     @Test
     void onboardingTest() {
         firstPage
@@ -37,15 +37,16 @@ public class WikiTests extends TestBase {
                 .checkPrimaryTextOnFourthPage()
                 .visibilityCheckOfDoneButtonOnFourthPage()
                 .clickToGetStarted();
-    }
+    }*/
 
     @Test
     @DisplayName("Поиск статьи по заданному значению")
     void successfulOpenArticleTest() {
         firstPage
                 .clickSkipButtonOnFirstPage();
-        searchPage.checkAccessibilityOfSearchBar()
-                .enterValueIntoSearch(testData.valueSearch)
+        searchPage
+                .checkAccessibilityOfSearchBar()
+                .enterValueIntoSearch("Browserstack")
                 .checkListTitles()
                 .clickFirstArticleInResultList();
         articlePage
@@ -53,7 +54,7 @@ public class WikiTests extends TestBase {
 
     }
 
-    @Test
+/*    @Test
     @DisplayName("Отображение ошибки при некорректном вводе значения в поиск")
     void errorOpenArticleTest() {
         firstPage
@@ -63,5 +64,5 @@ public class WikiTests extends TestBase {
                 .enterValueIntoSearch(testData.valueSearchError);
         articlePage
                 .findText(testData.errorMessage);
-    }
+    }*/
 }

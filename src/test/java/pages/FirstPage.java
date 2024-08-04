@@ -25,11 +25,10 @@ public class FirstPage {
         return this;
     }
 
-    @Step("роверяем отображение кнопки Skip на первой странице")
+    @Step("Проверяем отображение кнопки Skip на первой странице")
     public FirstPage checkSkipButtonOnFirstPage() {
         skipButton.shouldBe(visible);
         skipButton.shouldHave(text("Skip"));
-        skipButton.click();
         return this;
     }
 

@@ -61,7 +61,8 @@ public class WikiTests extends TestBase {
                 .clickSkipButtonOnFirstPage();
         searchPage
                 .checkAccessibilityOfSearchBar()
-                .enterValueIntoSearch(testData.valueSearchError);
+                .enterValueIntoSearch(testData.valueSearchError)
+                .clickFirstArticleInResultList();
         articlePage
                 .findText(testData.errorMessage);
     }

@@ -46,11 +46,11 @@ public class WikiTests extends TestBase {
                 .clickSkipButtonOnFirstPage();
         searchPage
                 .checkAccessibilityOfSearchBar()
-                .enterValueIntoSearch("Browserstack")
+                .enterValueIntoSearch("BrowserStack")
                 .checkListTitles()
                 .clickFirstArticleInResultList();
         articlePage
-                .findText(testData.valueSearch);
+                .findText("BrowserStack");
 
     }
 

@@ -34,8 +34,9 @@ public class WikiTests extends TestBase {
                 .clickOnContinueButtonOnThirdPage();
 
         fourthPage
+                .checkPrimaryTextOnFourthPage()
                 .visibilityCheckOfDoneButtonOnFourthPage()
-                .сlickToGetStarted();
+                .clickToGetStarted();
     }
 
     @Test

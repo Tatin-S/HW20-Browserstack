@@ -25,7 +25,7 @@ public class FourthPage {
     }
 
     @Step("Нажатие на кнопку Get Started")
-    public void сlickToGetStarted() {
+    public void clickToGetStarted() {
         doneButton.click();
     }
 }
